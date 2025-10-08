@@ -1,0 +1,188 @@
+.menu {
+  padding: 6rem 0;
+  background: linear-gradient(135deg, #1a1a1a, #2a2a2a, #1a1a1a);
+  position: relative;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 4rem;
+  align-items: start;
+}
+
+.storySection {
+  padding-top: 2rem;
+}
+
+.storyTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.storyText {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  color: #ccc;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+.menuCard {
+  background: linear-gradient(145deg, #FFE5B4, #F5DEB3);
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 2rem;
+}
+
+.menuHeader {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.menuTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #8B4513;
+  margin-bottom: 1rem;
+}
+
+.menuTabs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #D2691E;
+}
+
+.menuTab {
+  background: none;
+  border: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #8B4513;
+  padding: 0.5rem 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.menuTab.active {
+  color: #D2691E;
+  border-bottom-color: #D2691E;
+}
+
+.menuTab:hover {
+  color: #D2691E;
+}
+
+.menuContent {
+  margin-bottom: 2rem;
+}
+
+.menuDay {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid rgba(139, 69, 19, 0.1);
+}
+
+.dayLabel {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #8B4513;
+}
+
+.dayPrice {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #D2691E;
+}
+
+.socialSection {
+  text-align: center;
+  border-top: 1px solid rgba(139, 69, 19, 0.2);
+  padding-top: 1.5rem;
+}
+
+.socialTitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #8B4513;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.socialIcons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.socialIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: #D2691E;
+  color: #fff;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.socialIcon:hover {
+  background: #8B4513;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 968px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .menuCard {
+    position: static;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .storyTitle {
+    font-size: 2.5rem;
+  }
+  
+  .menuTabs {
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  .menuTab {
+    flex: 1;
+    min-width: 80px;
+    text-align: center;
+  }
+}
