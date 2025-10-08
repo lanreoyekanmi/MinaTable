@@ -51,6 +51,7 @@ const Gallery: React.FC = () => {
         </div>
         
         <div className={styles.experienceSection}>
+          <div className={styles.sideDecoration}></div>
           <div className={styles.experienceContent}>
             <h3 className={styles.experienceTitle}>
               TASTE! OUR MEALS TO AND GET A TASTE OF<br />
@@ -58,18 +59,15 @@ const Gallery: React.FC = () => {
             </h3>
             
             <div className={styles.menuCategories}>
-              <div className={styles.menuCategory}>BEEF</div>
-              <div className={styles.menuCategory}>CHICKEN</div>
-              <div className={styles.menuCategory}>RICE</div>
-              <div className={styles.menuCategory}>FISH</div>
-              <div className={styles.menuCategory}>COCKTAILS</div>
+              <div className={`${styles.menuCategory} ${styles.beef}`}>BEEF</div>
+              <div className={`${styles.menuCategory} ${styles.chicken}`}>CHICKEN</div>
+              <div className={`${styles.menuCategory} ${styles.rice}`}>RICE</div>
+              <div className={`${styles.menuCategory} ${styles.fish}`}>FISH</div>
+              <div className={`${styles.menuCategory} ${styles.cocktails}`}>COCKTAILS</div>
             </div>
             
             <div className={styles.bowlIllustration}>
-              <div className={styles.bowl}>
-                <div className={styles.chopsticks}></div>
-                <div className={styles.bowlContent}></div>
-              </div>
+              <img src="/src/assets/pot.png" alt="Pot" className={styles.potImage} />
             </div>
           </div>
         </div>

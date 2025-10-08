@@ -8,6 +8,19 @@
   position: relative;
 }
 
+.sideDecoration {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 150px;
+  background-image: url('/src/assets/Side.png');
+  background-size: cover;
+  background-position: left center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
 .gallery::before {
   content: '';
   position: absolute;
@@ -121,6 +134,7 @@
 .experienceSection {
   padding: 4rem 2rem;
   text-align: center;
+  position: relative;
 }
 
 .experienceContent {
@@ -145,6 +159,13 @@
   max-width: 300px;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
+  padding: 1rem;
+  border-radius: 8px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all 0.3s ease;
 }
 
 .menuCategory {
@@ -156,11 +177,34 @@
   border-bottom: 1px solid #444;
   text-transform: uppercase;
   letter-spacing: 2px;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
 }
 
 .menuCategory:hover {
   color: #D2691E;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.menuCategories:has(.beef:hover) {
+  background-image: url('/src/assets/h.png');
+}
+
+.menuCategories:has(.chicken:hover) {
+  background-image: url('/src/assets/h1.png');
+}
+
+.menuCategories:has(.rice:hover) {
+  background-image: url('/src/assets/h2.png');
+}
+
+.menuCategories:has(.fish:hover) {
+  background-image: url('/src/assets/h3.png');
+}
+
+.menuCategories:has(.cocktails:hover) {
+  background-image: url('/src/assets/h4.png');
 }
 
 .bowlIllustration {
@@ -171,59 +215,12 @@
   align-items: center;
 }
 
-.bowl {
-  position: relative;
-  width: 150px;
-  height: 80px;
-  background: linear-gradient(145deg, #D2691E, #F7931E);
-  border-radius: 0 0 75px 75px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-}
-
-.bowlContent {
-  width: 120px;
-  height: 60px;
-  background: #FFD23F;
-  border-radius: 0 0 60px 60px;
-  margin-bottom: 5px;
-  position: relative;
-}
-
-.bowlContent::after {
-  content: '';
-  position: absolute;
-  top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 3px;
-  background: rgba(210, 105, 30, 0.6);
-  border-radius: 2px;
-}
-
-.chopsticks {
-  position: absolute;
-  top: -40px;
-  left: 50%;
-  transform: translateX(-50%) rotate(15deg);
-  width: 2px;
-  height: 60px;
-  background: #8B4513;
-  border-radius: 1px;
-}
-
-.chopsticks::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 8px;
-  width: 2px;
-  height: 60px;
-  background: #8B4513;
-  border-radius: 1px;
-  transform: rotate(-30deg);
+.potImage {
+  max-width: 150px;
+  max-height: 150px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
 }
 
 @media (max-width: 768px) {
