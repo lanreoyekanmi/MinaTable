@@ -1,0 +1,358 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.menuContainer {
+  position: relative;
+  width: 90vw;
+  max-width: 1200px;
+  height: 80vh;
+  max-height: 700px;
+  overflow: hidden;
+  border-radius: 20px;
+  animation: slideIn 0.4s ease-out;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+@keyframes slideIn {
+  from {
+    transform: scale(0.9) translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Removed separate background image layer - using container background instead */
+
+.menuContent {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.05)
+  );
+}
+
+.brandContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto 60px auto;
+  padding: 0 50px;
+}
+
+.logoSpace {
+  width: 200px;
+  height: 200px;
+  flex-shrink: 0;
+}
+
+.minaText,
+.tableText {
+  font-size: 4.5rem;
+  font-weight: 900;
+  color: #2c3e50;
+  letter-spacing: 6px;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  flex: 1;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.minaText {
+  text-align: right;
+  padding-right: 30px;
+}
+
+.tableText {
+  text-align: left;
+  padding-left: 30px;
+}
+
+/* Logo styles removed - using text-only layout */
+
+.navigation {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 30px;
+  width: 100%;
+  max-width: 900px;
+  margin-top: 30px;
+}
+
+.navigation .navItem:last-child {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.navItem {
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid #2c3e50;
+  color: #2c3e50;
+  padding: 20px 30px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 0;
+  text-transform: capitalize;
+  position: relative;
+  overflow: visible;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Corner line decorations - always visible */
+.navItem::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border: 2px solid #2c3e50;
+  border-radius: 0;
+  opacity: 1;
+  transform: scale(1);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.navItem::after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border: 1px solid #2c3e50;
+  border-radius: 0;
+  opacity: 1;
+  transform: scale(1);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.navItem:hover {
+  background: rgba(255, 255, 255, 1);
+  color: #2c3e50;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(44, 62, 80, 0.3);
+}
+
+.navItem:hover::before {
+  border-color: #c4384d;
+  transform: scale(1.05);
+}
+
+.navItem:hover::after {
+  border-color: #c4384d;
+  transform: scale(0.95);
+}
+
+.navItem:active {
+  transform: translateY(-1px);
+}
+
+.closeButton {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 3;
+}
+
+.closeButton:hover {
+  background: rgba(196, 56, 77, 0.9);
+  transform: rotate(90deg);
+}
+
+.closeButton span {
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background-color: #2c3e50;
+  transition: background-color 0.3s ease;
+}
+
+.closeButton:hover span {
+  background-color: #ffffff;
+}
+
+.closeButton span:first-child {
+  transform: rotate(45deg);
+}
+
+.closeButton span:last-child {
+  transform: rotate(-45deg);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .menuContainer {
+    width: 95vw;
+    height: 90vh;
+  }
+
+  .menuContent {
+    padding: 30px 20px;
+  }
+
+  .brandContainer {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-bottom: 40px;
+  }
+
+  .logoSpace {
+    width: 120px;
+    height: 120px;
+  }
+
+  .minaText,
+  .tableText {
+    font-size: 2.5rem;
+    letter-spacing: 3px;
+  }
+
+  .minaText {
+    padding-right: 15px;
+  }
+
+  .tableText {
+    padding-left: 15px;
+  }
+
+  .navigation {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 400px;
+  }
+
+  .navigation .navItem:last-child {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .navItem {
+    padding: 18px 25px;
+    font-size: 1rem;
+    min-height: 55px;
+  }
+
+  .navItem::before {
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+  }
+
+  .navItem::after {
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .brandContainer {
+    padding: 0 15px;
+  }
+
+  .logoSpace {
+    width: 100px;
+    height: 100px;
+  }
+
+  .minaText,
+  .tableText {
+    font-size: 2rem;
+    letter-spacing: 2px;
+  }
+
+  .minaText {
+    padding-right: 10px;
+  }
+
+  .tableText {
+    padding-left: 10px;
+  }
+
+  .navItem {
+    padding: 16px 20px;
+    font-size: 0.95rem;
+    min-height: 50px;
+  }
+
+  .navItem::before {
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+  }
+
+  .navItem::after {
+    top: 6px;
+    left: 6px;
+    right: 6px;
+    bottom: 6px;
+  }
+
+  .closeButton {
+    width: 45px;
+    height: 45px;
+    top: 20px;
+    right: 20px;
+  }
+}

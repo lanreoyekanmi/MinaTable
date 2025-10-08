@@ -3,7 +3,7 @@ import styles from './Menu.module.css';
 
 const Menu: React.FC = () => {
   return (
-    <section className={styles.menu}>
+    <section id="menu" className={styles.menu}>
       <div className={styles.container}>
         <div className={styles.storySection}>
           <h2 className={styles.storyTitle}>OUR STORY</h2>
