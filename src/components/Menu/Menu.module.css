@@ -8,14 +8,17 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-  display: grid;
-  grid-template-columns: 1fr 400px;
+  display: flex;
+  flex-direction: column;
   gap: 4rem;
-  align-items: start;
+  align-items: center;
 }
 
 .storySection {
   padding-top: 2rem;
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
 }
 
 .storyTitle {
@@ -41,8 +44,8 @@
   border-radius: 15px;
   padding: 2rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  position: sticky;
-  top: 2rem;
+  max-width: 500px;
+  width: 100%;
 }
 
 .menuHeader {
@@ -158,14 +161,7 @@
 
 @media (max-width: 968px) {
   .container {
-    grid-template-columns: 1fr;
     gap: 3rem;
-  }
-  
-  .menuCard {
-    position: static;
-    max-width: 500px;
-    margin: 0 auto;
   }
 }
 

@@ -26,26 +26,25 @@ const Gallery: React.FC = () => {
         <div className={styles.foodGrid}>
           <div className={styles.foodItem}>
             <div className={styles.foodImage}>
-              {/* Food image placeholder */}
-              <div className={styles.imagePlaceholder}></div>
+              <img src="/src/assets/b3.png" alt="Soup" className={styles.foodImg} />
             </div>
             <span className={styles.foodLabel}>Soup</span>
           </div>
           <div className={styles.foodItem}>
             <div className={styles.foodImage}>
-              <div className={styles.imagePlaceholder}></div>
+              <img src="/src/assets/b3.png" alt="Snacks" className={styles.foodImg} />
             </div>
             <span className={styles.foodLabel}>Snacks</span>
           </div>
           <div className={styles.foodItem}>
             <div className={styles.foodImage}>
-              <div className={styles.imagePlaceholder}></div>
+              <img src="/src/assets/b3.png" alt="Breakfast" className={styles.foodImg} />
             </div>
             <span className={styles.foodLabel}>Breakfast</span>
           </div>
           <div className={styles.foodItem}>
             <div className={styles.foodImage}>
-              <div className={styles.imagePlaceholder}></div>
+              <img src="/src/assets/b3.png" alt="Lunch" className={styles.foodImg} />
             </div>
             <span className={styles.foodLabel}>Lunch</span>
           </div>
