@@ -20,39 +20,39 @@ const Menu: React.FC = () => {
           <div className={styles.menuContent}>
             <div className={styles.menuDay}>
               <span className={styles.dayLabel}>Monday</span>
-              <span className={styles.dayPrice}>$8.00</span>
+              <span className={styles.dayPrice}>Closed</span>
             </div>
             <div className={styles.menuDay}>
               <span className={styles.dayLabel}>Tuesday</span>
-              <span className={styles.dayPrice}>$7.00</span>
+              <span className={styles.dayPrice}>Closed</span>
             </div>
             <div className={styles.menuDay}>
               <span className={styles.dayLabel}>Wednesday</span>
-              <span className={styles.dayPrice}>$6.00</span>
+              <span className={styles.dayPrice}>10am - 9pm</span>
             </div>
             <div className={styles.menuDay}>
               <span className={styles.dayLabel}>Thursday</span>
-              <span className={styles.dayPrice}>$8.00</span>
+              <span className={styles.dayPrice}>10am - 9pm</span>
             </div>
             <div className={styles.menuDay}>
               <span className={styles.dayLabel}>Friday</span>
-              <span className={styles.dayPrice}>$7.00</span>
+              <span className={styles.dayPrice}>10am - 9pm</span>
             </div>
             <div className={styles.menuDay}>
               <span className={styles.dayLabel}>Saturday</span>
-              <span className={styles.dayPrice}>$8.00</span>
+              <span className={styles.dayPrice}>10am - 9pm</span>
             </div>
             <div className={styles.menuDay}>
               <span className={styles.dayLabel}>Sunday</span>
-              <span className={styles.dayPrice}>$6.00</span>
+              <span className={styles.dayPrice}>10am - 9pm</span>
             </div>
           </div>
           
           <div className={styles.socialSection}>
-            <h4 className={styles.socialTitle}>SOCIAL</h4>
+            <h4 className={styles.socialTitle}>SOCIALS</h4>
             <div className={styles.socialIcons}>
-              <a href="#" className={styles.socialIcon}>📘</a>
-              <a href="#" className={styles.socialIcon}>📷</a>
+              <a href="#" className={styles.socialIcon}>f</a>
+              <a href="#" className={styles.socialIcon}>@</a>
             </div>
           </div>
         </div>
