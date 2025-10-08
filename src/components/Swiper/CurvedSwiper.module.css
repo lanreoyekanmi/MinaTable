@@ -1,0 +1,215 @@
+.swiperSection {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.swiperSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(ellipse at center, rgba(255, 215, 0, 0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.swiperHeader {
+  text-align: center;
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 2;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  font-family: 'Georgia', serif;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #cccccc;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.swiperContainer {
+  position: relative;
+  padding: 40px 0;
+}
+
+.swiper {
+  padding-bottom: 60px !important;
+}
+
+.swiperSlide {
+  width: 350px !important;
+  height: 250px;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.swiperSlide:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.slideImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.swiperSlide:hover .slideImage {
+  transform: scale(1.1);
+}
+
+.imageOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+  padding: 30px 20px 20px;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.swiperSlide:hover .imageOverlay {
+  transform: translateY(0);
+}
+
+.imageTitle {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Custom Swiper Navigation Styles */
+:global(.swiper-button-next),
+:global(.swiper-button-prev) {
+  color: #ffd700 !important;
+  background: rgba(255, 215, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 50%;
+  width: 50px !important;
+  height: 50px !important;
+  margin-top: -25px !important;
+  border: 2px solid rgba(255, 215, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+:global(.swiper-button-next):hover,
+:global(.swiper-button-prev):hover {
+  background: rgba(255, 215, 0, 0.2);
+  border-color: #ffd700;
+  transform: scale(1.1);
+}
+
+:global(.swiper-button-next::after),
+:global(.swiper-button-prev::after) {
+  font-size: 18px !important;
+  font-weight: bold;
+}
+
+/* Custom Pagination Styles */
+:global(.swiper-pagination-bullet) {
+  background: rgba(255, 255, 255, 0.3) !important;
+  border: 2px solid transparent !important;
+  width: 12px !important;
+  height: 12px !important;
+  transition: all 0.3s ease !important;
+}
+
+:global(.swiper-pagination-bullet-active) {
+  background: #ffd700 !important;
+  border-color: #ffd700 !important;
+  transform: scale(1.2);
+}
+
+:global(.swiper-pagination-bullet):hover {
+  background: rgba(255, 215, 0, 0.7) !important;
+}
+
+/* Curved Effect Enhancement */
+.swiper :global(.swiper-slide-shadow-left),
+.swiper :global(.swiper-slide-shadow-right) {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), transparent) !important;
+  border-radius: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .swiperSection {
+    padding: 60px 0;
+  }
+  
+  .title {
+    font-size: 2.2rem;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+    padding: 0 20px;
+  }
+  
+  .swiperSlide {
+    width: 280px !important;
+    height: 200px;
+  }
+  
+  .container {
+    padding: 0 15px;
+  }
+  
+  :global(.swiper-button-next),
+  :global(.swiper-button-prev) {
+    width: 40px !important;
+    height: 40px !important;
+    margin-top: -20px !important;
+  }
+  
+  :global(.swiper-button-next::after),
+  :global(.swiper-button-prev::after) {
+    font-size: 14px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.8rem;
+  }
+  
+  .swiperSlide {
+    width: 250px !important;
+    height: 180px;
+  }
+}
