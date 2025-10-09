@@ -1,0 +1,275 @@
+/* LocationPage.module.css */
+.locationPage {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  color: #ffffff;
+  padding-top: 2rem;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.topNav {
+  padding: 1rem 0;
+  margin-bottom: 1rem;
+}
+
+.backButton {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  color: #d4af37;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  letter-spacing: 0.5px;
+}
+
+.backButton:hover {
+  background: rgba(212, 175, 55, 0.2);
+  transform: translateX(-5px);
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.brandSection {
+  margin-bottom: 2rem;
+}
+
+.brandName {
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin: 0;
+  background: linear-gradient(45deg, #d4af37, #ffd700);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 4px 8px rgba(212, 175, 55, 0.3);
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  color: #cccccc;
+  margin: 0.5rem 0 0 0;
+  text-transform: uppercase;
+}
+
+.pageTitle h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.locationContent {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.locationInfo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.infoCard {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.infoCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+  border-color: rgba(212, 175, 55, 0.3);
+}
+
+.infoCard h3 {
+  color: #d4af37;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 0 0 1rem 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.infoCard p {
+  color: #cccccc;
+  line-height: 1.6;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.hoursSection {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hoursSection h3 {
+  color: #d4af37;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 0 1.5rem 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.hoursGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.75rem;
+}
+
+.hourItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  border-left: 3px solid #d4af37;
+}
+
+.day {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.time {
+  color: #cccccc;
+  font-weight: 500;
+}
+
+.mapSection {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mapPlaceholder {
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  border: 2px dashed rgba(212, 175, 55, 0.3);
+  text-align: center;
+}
+
+.mapPlaceholder h3 {
+  color: #d4af37;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 0 1rem 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.mapPlaceholder p {
+  color: #cccccc;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.directionsSection {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.directionsSection h3 {
+  color: #d4af37;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 0 1.5rem 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.directionsContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.directionsContent p {
+  color: #cccccc;
+  line-height: 1.6;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.directionsContent strong {
+  color: #d4af37;
+  font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .brandName {
+    font-size: 2rem;
+  }
+  
+  .pageTitle h2 {
+    font-size: 1.75rem;
+  }
+  
+  .locationInfo {
+    grid-template-columns: 1fr;
+  }
+  
+  .hoursGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .brandName {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+  }
+  
+  .pageTitle h2 {
+    font-size: 1.5rem;
+  }
+  
+  .infoCard,
+  .hoursSection,
+  .mapSection,
+  .directionsSection {
+    padding: 1.5rem;
+  }
+}

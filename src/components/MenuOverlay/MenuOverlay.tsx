@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from './MenuOverlay.module.css';
 import menuBackground from '../../assets/menu.png';
 
@@ -8,9 +9,16 @@ interface MenuOverlayProps {
 }
 
 const MenuOverlay: React.FC<MenuOverlayProps> = ({ isOpen, onClose }) => {
+  const navigate = useNavigate();
+
   const handleMenuItemClick = (item: string) => {
-    console.log(`Navigating to: ${item}`);
     onClose();
+    navigate(`/${item}`);
+  };
+
+  const handleHomeClick = () => {
+    onClose();
+    navigate('/');
   };
 
   const handleBackdropClick = (e: React.MouseEvent) => {
@@ -34,7 +42,7 @@ const MenuOverlay: React.FC<MenuOverlayProps> = ({ isOpen, onClose }) => {
           <nav className={styles.navigation}>
             <button 
               className={styles.navItem}
-              onClick={() => handleMenuItemClick('home')}
+              onClick={handleHomeClick}
             >
               Home Page
             </button>

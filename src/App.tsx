@@ -1,24 +1,22 @@
-import React from 'react';
-import Header from './components/Header/Header';
-import Hero from './components/Hero/Hero';
-import StickyNav from './components/StickyNav/StickyNav';
-import Gallery from './components/Gallery/Gallery';
-import Menu from './components/Menu/Menu';
-import CurvedSwiper from './components/Swiper/CurvedSwiper';
-import OurStory from './components/OurStory/OurStory';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import MenuPage from './pages/MenuPage';
+import ReservationPage from './pages/ReservationPage';
+import LocationPage from './pages/LocationPage';
 import './styles/App.css';
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Hero />
-      <StickyNav />
-      <CurvedSwiper />
-      <Gallery />
-     <OurStory /> 
-      <Menu />
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/menu" element={<MenuPage />} />
+          <Route path="/reservation" element={<ReservationPage />} />
+          <Route path="/location" element={<LocationPage />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
