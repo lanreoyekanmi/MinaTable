@@ -21,19 +21,19 @@
 }
 
 .navContainer {
-  --r: 20px;
-  max-width: 600px;
+  --r: 15px;
+  max-width: 450px;
   margin: 0 auto;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   background-color: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
-  padding: 6px;
+  padding: 6px 20px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
   border: 2px solid rgba(255, 255, 255, 0.3);
-  height: 70px;
+  height: 55px;
   position: relative;
   clip-path: polygon(
     var(--r) 0%, 
@@ -56,90 +56,68 @@
   box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
 }
 
-.menuButton {
-  --r: 15px;
-  display: flex;
-  align-items: center;
-  gap: 60px;
-  background-color: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: none;
-  color: #000000;
-  padding: 0 30px;
-  font-family: inherit;
-  font-size: 15px;
-  font-weight: 600;
-  letter-spacing: 0.8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-  flex: 1;
-  justify-content: center;
-  margin-right: 2px;
-  height: 56px;
-  min-width: 0;
-  position: relative;
-  clip-path: polygon(
-    var(--r) 0%, 
-    calc(100% - var(--r)) 0%, 
-    100% var(--r), 
-    100% calc(100% - var(--r)), 
-    calc(100% - var(--r)) 100%, 
-    var(--r) 100%, 
-    0% calc(100% - var(--r)), 
-    0% var(--r)
-  );
-}
 
-.menuButton:hover {
-  background-color: rgba(255, 255, 255, 1);
-  transform: translateY(-1px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
 
 .menuText {
   font-weight: 600;
   letter-spacing: 1.5px;
+  color: #000000;
+  font-size: 15px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.menuText:hover {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .hamburger {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 3px;
-  width: 18px;
-  height: 12px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.hamburger:hover {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .hamburger span {
   display: block;
-  width: 100%;
-  height: 3px;
+  width: 18px;
+  height: 2px;
   background-color: #000000;
   transition: background-color 0.3s ease;
   border-radius: 1px;
 }
 
 .hamburger span:nth-child(1) {
-  width: 100%;
+  width: 18px;
 }
 
 .hamburger span:nth-child(2) {
-  width: 60%;
+  width: 14px;
 }
 
 .hamburger span:nth-child(3) {
-  width: 80%;
+  width: 16px;
 }
 
 .reservationButton {
-  --r: 15px;
-  background-color: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: transparent;
   border: none;
   color: #000000;
-  padding: 0 30px;
+  padding: 10px;
   font-family: inherit;
   font-size: 15px;
   font-weight: 600;
@@ -147,53 +125,49 @@
   cursor: pointer;
   transition: all 0.3s ease;
   text-transform: uppercase;
-  flex: 1;
-  justify-content: center;
-  display: flex;
-  align-items: center;
-  margin-left: 2px;
-  height: 56px;
-  min-width: 0;
-  position: relative;
-  clip-path: polygon(
-    var(--r) 0%, 
-    calc(100% - var(--r)) 0%, 
-    100% var(--r), 
-    100% calc(100% - var(--r)), 
-    calc(100% - var(--r)) 100%, 
-    var(--r) 100%, 
-    0% calc(100% - var(--r)), 
-    0% var(--r)
-  );
+  border-radius: 8px;
 }
 
 .reservationButton:hover {
-  background-color: rgba(255, 255, 255, 1);
-  transform: translateY(-1px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
   .navContainer {
-    max-width: 400px;
-    height: 60px;
+    max-width: 350px;
+    height: 50px;
   }
   
-  .menuButton,
+  .menuText,
   .reservationButton {
     font-size: 13px;
-    height: 48px;
-    padding: 0 20px;
-  }
-  
-  .menuText {
-    display: none;
+    padding: 8px;
   }
   
   .hamburger {
-    width: 16px;
-    height: 10px;
+    width: 28px;
+    height: 28px;
+    padding: 6px;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  .hamburger span {
+    width: 20px !important;
+    height: 3px !important;
+    background-color: #000000 !important;
+  }
+  
+  .hamburger span:nth-child(1) {
+    width: 20px !important;
+  }
+
+  .hamburger span:nth-child(2) {
+    width: 16px !important;
+  }
+
+  .hamburger span:nth-child(3) {
+    width: 18px !important;
   }
 }
 
@@ -207,14 +181,38 @@
   }
   
   .navContainer {
-    max-width: 300px;
-    height: 50px;
+    max-width: 280px;
+    height: 45px;
   }
   
-  .menuButton,
+  .menuText,
   .reservationButton {
     font-size: 12px;
-    height: 40px;
-    padding: 0 15px;
+    padding: 6px;
+  }
+  
+  .hamburger {
+    width: 26px;
+    height: 26px;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  .hamburger span {
+    width: 18px !important;
+    height: 3px !important;
+    background-color: #000000 !important;
+  }
+  
+  .hamburger span:nth-child(1) {
+    width: 18px !important;
+  }
+
+  .hamburger span:nth-child(2) {
+    width: 14px !important;
+  }
+
+  .hamburger span:nth-child(3) {
+    width: 16px !important;
   }
 }

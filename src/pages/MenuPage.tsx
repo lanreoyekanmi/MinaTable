@@ -5,19 +5,7 @@ import Menu from '../components/Menu/Menu';
 import backgroundImage from '../assets/Background+Border.png';
 import styles from './MenuPage.module.css';
 
-interface MenuItem {
-  id: string;
-  name: string;
-  description: string;
-  price: string;
-  category: string;
-  image?: string;
-}
-
 const MenuPage: React.FC = () => {
-  // Menu items array - add your actual menu items here
-  const menuItems: MenuItem[] = [];
-
   const menuSections = [
     'BEEF', 'CHICKEN', 'PORK', 'FISH', 
     'BREAKFAST', 'LUNCH', 'SUSHI', 'SIDES', 
@@ -27,7 +15,6 @@ const MenuPage: React.FC = () => {
   return (
     <div className={styles.menuPage}>
       <Header />
-      
       <section className={styles.mainMenuSection}>
         <div className={styles.menuOverlay}>
           <div className={styles.menuContainer}>
@@ -39,7 +26,7 @@ const MenuPage: React.FC = () => {
                 <h2 className={styles.menuMainTitle}>DISCOVER OUR MENU</h2>
               </div>
             </div>
-<StickyNav />
+ <StickyNav />
             <div className={styles.sideDecoration}></div>
             {/* Menu Categories Section */}
             <div className={styles.menuCategoriesSection}>
@@ -66,24 +53,6 @@ const MenuPage: React.FC = () => {
           </div>
         </div>
       </section>
-      
-      <div className={styles.container}>
-
-        <div className={styles.menuContent}>
-          <div className={styles.menuGrid}>
-            {menuItems.map((item) => (
-              <div key={item.id} className={styles.menuItem}>
-                <div className={styles.itemContent}>
-                  <h3 className={styles.itemName}>{item.name}</h3>
-                  <p className={styles.itemDescription}>{item.description}</p>
-                  <div className={styles.itemPrice}>{item.price}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-      </div>
       
       <Menu />
     </div>

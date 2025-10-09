@@ -236,10 +236,51 @@
   .experienceTitle {
     font-size: 1.5rem;
   }
+  
+  .sideDecoration {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 80px;
+    background-image: url('/src/assets/Side.png');
+    background-size: cover;
+    background-position: left center;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+    z-index: 1;
+  }
+  
+  .experienceSection {
+    padding: 2rem 1rem 2rem 100px;
+  }
+  
+  .experienceContent {
+    position: relative;
+    z-index: 2;
+  }
 }
 
 @media (max-width: 480px) {
   .foodGrid {
     grid-template-columns: 1fr;
+  }
+  
+  .sideDecoration {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 60px;
+    background-image: url('/src/assets/Side.png');
+    background-size: cover;
+    background-position: left center;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+    z-index: 1;
+  }
+  
+  .experienceSection {
+    padding: 1rem 1rem 1rem 80px;
   }
 }

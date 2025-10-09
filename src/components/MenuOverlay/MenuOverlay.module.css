@@ -249,27 +249,33 @@
   .brandContainer {
     flex-direction: row;
     justify-content: space-between;
-    padding: 0 20px;
+    align-items: center;
+    padding: 0 10px;
     margin-bottom: 40px;
+    width: 100%;
   }
 
   .logoSpace {
-    width: 120px;
-    height: 120px;
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
   }
 
   .minaText,
   .tableText {
-    font-size: 2.5rem;
-    letter-spacing: 3px;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    flex: 1;
   }
 
   .minaText {
-    padding-right: 15px;
+    text-align: right;
+    padding-right: 10px;
   }
 
   .tableText {
-    padding-left: 15px;
+    text-align: left;
+    padding-left: 10px;
   }
 
   .navigation {
@@ -307,26 +313,31 @@
 
 @media (max-width: 480px) {
   .brandContainer {
-    padding: 0 15px;
+    padding: 0 5px;
+    width: 100%;
   }
 
   .logoSpace {
-    width: 100px;
-    height: 100px;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
   }
 
   .minaText,
   .tableText {
-    font-size: 2rem;
-    letter-spacing: 2px;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    flex: 1;
   }
 
   .minaText {
-    padding-right: 10px;
+    text-align: right;
+    padding-right: 5px;
   }
 
   .tableText {
-    padding-left: 10px;
+    text-align: left;
+    padding-left: 5px;
   }
 
   .navItem {

@@ -37,22 +37,21 @@ const StickyNav: React.FC = () => {
   return (
     <nav className={`${styles.stickyNav} ${isSticky ? styles.sticky : ''}`}>
       <div className={styles.navContainer}>
-        <div className={styles.menuButton}>
-          <span 
-            className={styles.menuText}
-            onClick={handleMenuTextClick}
-          >
-            OUR MENU
-          </span>
-          <div 
-            className={styles.hamburger}
-            onClick={handleHamburgerClick}
-            aria-label="Open menu"
-          >
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
+        <span 
+          className={styles.menuText}
+          onClick={handleMenuTextClick}
+        >
+          OUR MENU
+        </span>
+        
+        <div 
+          className={styles.hamburger}
+          onClick={handleHamburgerClick}
+          aria-label="Open menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
         
         <button 

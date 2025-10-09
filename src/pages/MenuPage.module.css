@@ -25,12 +25,7 @@
 .menuOverlay {
   position: absolute;
   top: 0;
-  lef  .sideDecoration {
-    width: 90px;
-    height: 400px;
-    left: 15px;
-    top: 15%;
-  }
+  left: 0;
   width: 100%;
   height: 100%;
   background: linear-gradient(
@@ -161,7 +156,8 @@
   letter-spacing: 2px;
   color: #ffffff;
   text-transform: uppercase;
-  padding: 0.75rem 1rem;
+  padding: 0.5rem 1rem;
+  margin: 0;
   cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
@@ -192,280 +188,7 @@
   background-image: url('/src/assets/n1.jpg');
 }
 
-.rightSide {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-.logoEmblem {
-  position: relative;
-}
-
-.emblemCircle {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background: linear-gradient(45deg, #d4af37, #ffd700);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 0 30px rgba(212, 175, 55, 0.5);
-}
-
-.emblemIcon {
-  width: 120px;
-  height: 120px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  position: relative;
-}
-
-.emblemIcon::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 60px;
-  height: 60px;
-  background: linear-gradient(45deg, #ffffff, #f0f0f0);
-  border-radius: 50%;
-}
-
-/* Bottom Navigation */
-.bottomNavigation {
-  padding: 2rem 0;
-  display: flex;
-  justify-content: center;
-}
-
-.menuTabs {
-  display: flex;
-  gap: 0;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 0;
-  overflow: hidden;
-}
-
-.menuTab {
-  padding: 1rem 2rem;
-  background: rgba(255, 255, 255, 0.1);
-  color: #ffffff;
-  border: none;
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: 1px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-  border-right: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.menuTab:last-child {
-  border-right: none;
-}
-
-.menuTab:hover {
-  background: rgba(212, 175, 55, 0.2);
-}
-
-.menuTab.active {
-  background: #d4af37;
-  color: #000000;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 3rem 2rem 0 2rem;
-}
-
-.menuNavigation {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 3rem;
-}
-
-.categoryTabs {
-  display: flex;
-  gap: 1rem;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 0.5rem;
-  border-radius: 50px;
-  backdrop-filter: blur(10px);
-}
-
-.categoryTab {
-  padding: 0.75rem 2rem;
-  background: transparent;
-  color: #ffffff;
-  border: none;
-  border-radius: 25px;
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: 1px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-}
-
-.categoryTab:hover {
-  background: rgba(212, 175, 55, 0.2);
-  transform: translateY(-2px);
-}
-
-.categoryTab.active {
-  background: linear-gradient(45deg, #d4af37, #ffd700);
-  color: #1a1a1a;
-  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
-}
-
-.menuContent {
-  margin-bottom: 4rem;
-}
-
-.menuGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2rem;
-  margin-bottom: 3rem;
-}
-
-.menuItem {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 15px;
-  padding: 2rem;
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.menuItem::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.1), transparent);
-  transition: left 0.5s ease;
-}
-
-.menuItem:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
-  border-color: rgba(212, 175, 55, 0.3);
-}
-
-.menuItem:hover::before {
-  left: 100%;
-}
-
-.itemContent {
-  position: relative;
-  z-index: 2;
-}
-
-.itemName {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin: 0 0 1rem 0;
-  color: #d4af37;
-  letter-spacing: 1px;
-}
-
-.itemDescription {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #cccccc;
-  margin: 0 0 1.5rem 0;
-}
-
-.itemPrice {
-  font-size: 1.25rem;
-  font-weight: bold;
-  color: #ffd700;
-  letter-spacing: 1px;
-}
-
-.infoSection {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 3rem;
-  padding: 3rem 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.operatingHours h3,
-.socialSection h3 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin: 0 0 1.5rem 0;
-  color: #d4af37;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-
-.hoursGrid {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.hourItem {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.75rem 1rem;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 8px;
-  border-left: 3px solid #d4af37;
-}
-
-.day {
-  font-weight: 600;
-  color: #ffffff;
-}
-
-.time {
-  color: #cccccc;
-  font-weight: 500;
-}
-
-.socialSection {
-  text-align: center;
-}
-
-.socialIcons {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.socialIcon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50px;
-  height: 50px;
-  background: linear-gradient(45deg, #d4af37, #ffd700);
-  color: #1a1a1a;
-  border-radius: 50%;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.25rem;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
-}
-
-.socialIcon:hover {
-  transform: translateY(-3px) scale(1.1);
-  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.5);
-}
 
 /* Responsive Design */
 @media (max-width: 1024px) {
@@ -497,152 +220,147 @@
 
 @media (max-width: 768px) {
   .container {
-    padding: 2rem 1rem 0 1rem;
+    padding: 1rem 1rem 0 1rem;
   }
   
   .mainMenuSection {
-    margin-top: 60px;
-    min-height: calc(100vh - 60px);
+    margin-top: 10px;
+    min-height: calc(100vh - 10px);
+    padding-bottom: 8rem;
   }
   
   .menuContainer {
     padding: 1rem;
-    min-height: calc(100vh - 60px);
+    min-height: calc(100vh - 10px);
+    gap: 2rem;
+  }
+  
+  .brandingSection {
+    padding: 1rem 0 2rem 0;
   }
   
   .brandTitle {
-    font-size: 2rem;
+    font-size: 1.8rem;
+  }
+  
+  .brandSubtitle {
+    font-size: 0.85rem;
+    margin: 0 0 1.2rem 0;
   }
   
   .menuMainTitle {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   
   .menuCategoriesSection {
-    padding: 2rem 0;
+    padding: 2rem 0 4rem 0;
+    margin-top: 0;
   }
   
   .sideDecoration {
-    width: 40px;
-    height: 200px;
-    left: 5px;
+    position: absolute;
+    width: 45px;
+    height: 280px;
+    left: 3px;
     top: 25%;
+    background-image: url('/src/assets/Side.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 3;
+    opacity: 0.8;
   }
   
   .menuCategories {
-    gap: 0.5rem;
-    max-width: 300px;
+    gap: 0.8rem;
+    max-width: 320px;
+    padding: 1rem;
+    margin-top: 0;
   }
   
   .menuCategoryItem {
-    font-size: 0.95rem;
-    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+    padding: 0.4rem 0.6rem;
+    margin: 0;
+    letter-spacing: 0.8px;
   }
   
   .container {
     padding: 1rem;
     margin-bottom: 2rem;
   }
-  
-  .emblemCircle {
-    width: 150px;
-    height: 150px;
-  }
-  
-  .emblemIcon {
-    width: 90px;
-    height: 90px;
-  }
-  
-  .emblemIcon::before {
-    width: 45px;
-    height: 45px;
-  }
-  
-  .menuTabs {
-    flex-wrap: wrap;
-  }
-  
-  .menuTab {
-    padding: 0.75rem 1.5rem;
-    font-size: 0.9rem;
-  }
-  
-  .categoryTabs {
-    flex-wrap: wrap;
-    gap: 0.5rem;
-  }
-  
-  .categoryTab {
-    padding: 0.5rem 1rem;
-    font-size: 0.9rem;
-  }
-  
-  .menuGrid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-  
-  .menuItem {
-    padding: 1.5rem;
-  }
-  
-  .infoSection {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
+
 }
 
 @media (max-width: 480px) {
+  .mainMenuSection {
+    margin-top: 5px;
+    padding-bottom: 6rem;
+  }
+  
+  .menuContainer {
+    padding: 0.8rem;
+    gap: 1.5rem;
+  }
+  
+  .brandingSection {
+    padding: 0.8rem 0 1.5rem 0;
+  }
+  
+  .menuCategoriesSection {
+    padding: 1.5rem 0 3rem 0;
+    margin-top: 0;
+  }
+  
+  .sideDecoration {
+    position: absolute;
+    width: 35px;
+    height: 220px;
+    left: 2px;
+    top: 20%;
+    background-image: url('/src/assets/Side.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 3;
+    opacity: 0.7;
+  }
+  
   .brandTitle {
-    font-size: 1.5rem;
-    letter-spacing: 2px;
+    font-size: 1.4rem;
+    letter-spacing: 1.8px;
+    margin: 0 0 0.8rem 0;
   }
   
   .brandSubtitle {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     letter-spacing: 2px;
+    margin: 0 0 1rem 0;
   }
   
   .menuMainTitle {
-    font-size: 2rem;
-    letter-spacing: 2px;
+    font-size: 1.9rem;
+    letter-spacing: 1.8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .menuCategories {
+    gap: 0.6rem;
+    max-width: 300px;
+    padding: 0.8rem;
+    margin-top: 0;
   }
   
   .menuCategoryItem {
-    font-size: 0.9rem;
+    font-size: 0.75rem;
+    padding: 0.3rem 0.4rem;
+    margin: 0;
+    letter-spacing: 0.5px;
   }
-  
-  .emblemCircle {
-    width: 120px;
-    height: 120px;
-  }
-  
-  .emblemIcon {
-    width: 70px;
-    height: 70px;
-  }
-  
-  .emblemIcon::before {
-    width: 35px;
-    height: 35px;
-  }
-  
-  .menuTab {
-    padding: 0.5rem 1rem;
-    font-size: 0.8rem;
-  }
-  
-  .categoryTab {
-    padding: 0.5rem 0.75rem;
-    font-size: 0.8rem;
-  }
-  
-  .menuItem {
-    padding: 1rem;
-  }
-  
-  .itemName {
-    font-size: 1.25rem;
-  }
+
 }
