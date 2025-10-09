@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from './StickyNav.module.css';
 import MenuOverlay from '../MenuOverlay/MenuOverlay';
 
 const StickyNav: React.FC = () => {
   const [isSticky, setIsSticky] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,7 +17,12 @@ const StickyNav: React.FC = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-  const handleMenuClick = () => {
+
+  const handleMenuTextClick = () => {
+    navigate('/menu');
+  };
+
+  const handleHamburgerClick = () => {
     setIsMenuOpen(true);
   };
 
@@ -24,25 +31,29 @@ const StickyNav: React.FC = () => {
   };
 
   const handleReservationClick = () => {
-    // Handle reservation logic
-    console.log('Reservation clicked');
+    navigate('/reservation');
   };
 
   return (
     <nav className={`${styles.stickyNav} ${isSticky ? styles.sticky : ''}`}>
       <div className={styles.navContainer}>
-        <button 
-          className={styles.menuButton}
-          onClick={handleMenuClick}
-          aria-label="Open menu"
-        >
-          <span className={styles.menuText}>OUR MENU</span>
-          <div className={styles.hamburger}>
+        <div className={styles.menuButton}>
+          <span 
+            className={styles.menuText}
+            onClick={handleMenuTextClick}
+          >
+            OUR MENU
+          </span>
+          <div 
+            className={styles.hamburger}
+            onClick={handleHamburgerClick}
+            aria-label="Open menu"
+          >
             <span></span>
             <span></span>
             <span></span>
           </div>
-        </button>
+        </div>
         
         <button 
           className={styles.reservationButton}
