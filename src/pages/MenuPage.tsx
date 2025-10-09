@@ -40,12 +40,20 @@ const MenuPage: React.FC = () => {
               </div>
             </div>
 <StickyNav />
+            <div className={styles.sideDecoration}></div>
             {/* Menu Categories Section */}
             <div className={styles.menuCategoriesSection}>
               <div className={styles.leftSide}>
                 <div className={styles.menuCategories}>
                   {menuSections.map((section) => (
-                    <div key={section} className={styles.menuCategoryItem}>
+                    <div 
+                      key={section} 
+                      className={`${styles.menuCategoryItem} ${
+                        section === 'BEEF' ? styles.beef :
+                        section === 'CHICKEN' ? styles.chicken :
+                        section === 'PORK' ? styles.pork : ''
+                      }`}
+                    >
                       {section}
                     </div>
                   ))}

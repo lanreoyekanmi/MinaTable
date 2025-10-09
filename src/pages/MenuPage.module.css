@@ -1,4 +1,6 @@
 /* MenuPage.module.css */
+@import url('https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;600;700;900&display=swap');
+
 .menuPage {
   min-height: 100vh;
   background: #000000;
@@ -23,7 +25,12 @@
 .menuOverlay {
   position: absolute;
   top: 0;
-  left: 0;
+  lef  .sideDecoration {
+    width: 90px;
+    height: 400px;
+    left: 15px;
+    top: 15%;
+  }
   width: 100%;
   height: 100%;
   background: linear-gradient(
@@ -116,6 +123,20 @@
   margin: 0 auto;
 }
 
+.sideDecoration {
+  position: absolute;
+  left: 20px;
+  top: 25%;
+  width: 220px;
+  height: 800px;
+  background-image: url('/src/assets/Side.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 3;
+  opacity: 0.9;
+}
+
 .menuCategories {
   display: flex;
   flex-direction: column;
@@ -125,11 +146,18 @@
   max-width: 400px;
   margin: 0 auto;
   padding: 2rem 1rem;
+  position: relative;
+  border-radius: 8px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all 0.3s ease;
 }
 
 .menuCategoryItem {
+  font-family: 'Zen Old Mincho', serif;
   font-size: 1.3rem;
-  font-weight: bold;
+  font-weight: 600;
   letter-spacing: 2px;
   color: #ffffff;
   text-transform: uppercase;
@@ -137,11 +165,31 @@
   cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
+  z-index: 2;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .menuCategoryItem:hover {
   color: #d4af37;
   transform: translateY(-3px);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.menuCategoryItem:last-child {
+  border-bottom: none;
+}
+
+/* Hover effects for specific menu categories */
+.menuCategories:has(.beef:hover) {
+  background-image: url('/src/assets/p1.jpg');
+}
+
+.menuCategories:has(.chicken:hover) {
+  background-image: url('/src/assets/f7.jpg');
+}
+
+.menuCategories:has(.pork:hover) {
+  background-image: url('/src/assets/n1.jpg');
 }
 
 .rightSide {
@@ -428,6 +476,13 @@
     padding: 2rem 0;
   }
   
+  .sideDecoration {
+    width: 60px;
+    height: 300px;
+    left: 15px;
+    top: 15%;
+  }
+  
   .menuCategories {
     gap: 0.75rem;
     max-width: 600px;
@@ -465,6 +520,13 @@
   
   .menuCategoriesSection {
     padding: 2rem 0;
+  }
+  
+  .sideDecoration {
+    width: 40px;
+    height: 200px;
+    left: 5px;
+    top: 25%;
   }
   
   .menuCategories {
