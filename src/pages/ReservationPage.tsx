@@ -4,6 +4,7 @@ import styles from './ReservationPage.module.css';
 import StickyNav from '../components/StickyNav/StickyNav';
 import Menu from '../components/Menu/Menu';
 import styBackground from '../assets/stybackground.png';
+import reservationBg from '../assets/reseveration-background.png';
 
 const ReservationPage: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -30,7 +31,7 @@ const ReservationPage: React.FC = () => {
 
         <div className={styles.imageSection}>
           <div className={styles.restaurantImage}>
-            <img src="/src/assets/reseveration-background.png" alt="" />
+            <img src={reservationBg} alt="" />
           </div>
         </div>
         <StickyNav />

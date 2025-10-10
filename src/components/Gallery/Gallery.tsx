@@ -1,5 +1,7 @@
 import React from 'react';
 import styles from './Gallery.module.css';
+import b3Image from '../../assets/b3.png';
+import potImage from '../../assets/pot.png';
 
 const Gallery: React.FC = () => {
   return (
@@ -26,25 +28,25 @@ const Gallery: React.FC = () => {
         <div className={styles.foodGrid}>
           <div className={styles.foodItem}>
             <div className={styles.foodImage}>
-              <img src="/src/assets/b3.png" alt="Soup" className={styles.foodImg} />
+              <img src={b3Image} alt="Soup" className={styles.foodImg} />
             </div>
             <span className={styles.foodLabel}>Soup</span>
           </div>
           <div className={styles.foodItem}>
             <div className={styles.foodImage}>
-              <img src="/src/assets/b3.png" alt="Snacks" className={styles.foodImg} />
+              <img src={b3Image} alt="Snacks" className={styles.foodImg} />
             </div>
             <span className={styles.foodLabel}>Snacks</span>
           </div>
           <div className={styles.foodItem}>
             <div className={styles.foodImage}>
-              <img src="/src/assets/b3.png" alt="Breakfast" className={styles.foodImg} />
+              <img src={b3Image} alt="Breakfast" className={styles.foodImg} />
             </div>
             <span className={styles.foodLabel}>Breakfast</span>
           </div>
           <div className={styles.foodItem}>
             <div className={styles.foodImage}>
-              <img src="/src/assets/b3.png" alt="Lunch" className={styles.foodImg} />
+              <img src={b3Image} alt="Lunch" className={styles.foodImg} />
             </div>
             <span className={styles.foodLabel}>Lunch</span>
           </div>
@@ -67,7 +69,7 @@ const Gallery: React.FC = () => {
             </div>
             
             <div className={styles.bowlIllustration}>
-              <img src="/src/assets/pot.png" alt="Pot" className={styles.potImage} />
+              <img src={potImage} alt="Pot" className={styles.potImage} />
             </div>
           </div>
         </div>

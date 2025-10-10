@@ -1,7 +1,7 @@
 .menu {
   padding: 8rem 0;
   position: relative;
-  background-image: url('/src/assets/menu-mountains.png');
+  background-image: url('/images/menu-mountains.png');
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;

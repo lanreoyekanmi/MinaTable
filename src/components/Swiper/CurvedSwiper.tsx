@@ -8,15 +8,23 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-coverflow';
 
+// Import food images
+import f1 from '../../assets/f1.jpg';
+import f2 from '../../assets/f2.jpeg';
+import f3 from '../../assets/f3.png';
+import f4 from '../../assets/f4.png';
+import f5 from '../../assets/f5.jpg';
+import f6 from '../../assets/f6.jpg';
+
 const CurvedSwiper: React.FC = () => {
   // Food images for the swiper
   const images = [
-    { id: 1, src: '/src/assets/f1.jpg', alt: '' },
-    { id: 2, src: '/src/assets/f2.jpeg', alt: '' },
-    { id: 3, src: '/src/assets/f3.png', alt: '' },
-    { id: 4, src: '/src/assets/f4.png', alt: '' },
-    { id: 5, src: '/src/assets/f5.jpg', alt: '' },
-    { id: 6, src: '/src/assets/f6.jpg', alt: '' },
+    { id: 1, src: f1, alt: '' },
+    { id: 2, src: f2, alt: '' },
+    { id: 3, src: f3, alt: '' },
+    { id: 4, src: f4, alt: '' },
+    { id: 5, src: f5, alt: '' },
+    { id: 6, src: f6, alt: '' },
   ];
 
   return (

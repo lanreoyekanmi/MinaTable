@@ -1,11 +1,7 @@
 /* ReservationPage.module.css */
 .reservationPage {
   min-height: 100vh;
-  background-image: url('../../assets/reseveration-background.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background: #000000;
   color: #ffffff;
   position: relative;
 }
