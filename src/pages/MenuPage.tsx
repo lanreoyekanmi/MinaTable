@@ -38,7 +38,14 @@ const MenuPage: React.FC = () => {
                       className={`${styles.menuCategoryItem} ${
                         section === 'BEEF' ? styles.beef :
                         section === 'CHICKEN' ? styles.chicken :
-                        section === 'PORK' ? styles.pork : ''
+                        section === 'PORK' ? styles.pork :
+                        section === 'FISH' ? styles.fish :
+                        section === 'BREAKFAST' ? styles.breakfast :
+                        section === 'LUNCH' ? styles.lunch :
+                        section === 'SUSHI' ? styles.sushi :
+                        section === 'SIDES' ? styles.sides :
+                        section === 'HOT STARTERS' ? styles.hotStarters :
+                        section === 'COLD STARTERS' ? styles.coldStarters : ''
                       }`}
                     >
                       {section}

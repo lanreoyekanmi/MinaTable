@@ -144,15 +144,20 @@
   align-items: center;
   justify-content: center;
   z-index: 1000;
+  overflow-y: auto;
+  padding: 1rem;
 }
 
 .modalContent {
   width: 90%;
   max-width: 800px;
+  max-height: 90vh;
   border-radius: 15px;
   padding: 3rem;
   position: relative;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  overflow-y: auto;
+  margin: auto;
 }
 
 .modalContent::before {
@@ -171,12 +176,18 @@
   position: absolute;
   top: 1rem;
   right: 1rem;
-  background: none;
+  background: rgba(0, 0, 0, 0.7);
   border: none;
   color: #ffffff;
   font-size: 2rem;
   cursor: pointer;
   z-index: 10;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .closeButton:hover {
@@ -379,7 +390,15 @@
 
   .modalContent {
     width: 95%;
+    max-width: 95%;
+    max-height: 85vh;
     padding: 2rem;
+    margin: 2rem auto;
+  }
+
+  .modalOverlay {
+    align-items: flex-start;
+    padding: 0.5rem;
   }
 
   .formRow {
@@ -417,10 +436,26 @@
   }
 
   .modalContent {
+    width: 98%;
+    max-width: 98%;
+    max-height: 90vh;
     padding: 1.5rem;
+    margin: 1rem auto;
   }
 
   .modalHeader h2 {
     font-size: 1.5rem;
+  }
+
+  .closeButton {
+    width: 35px;
+    height: 35px;
+    font-size: 1.5rem;
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+
+  .modalOverlay {
+    padding: 0.25rem;
   }
 }
