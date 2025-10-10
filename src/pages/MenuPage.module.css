@@ -1,24 +1,23 @@
 /* MenuPage.module.css */
 @import url('https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;600;700;900&display=swap');
 
+/* ===== BASE STYLES ===== */
 .menuPage {
   min-height: 100vh;
   background: #000000;
   color: #ffffff;
+  font-family: 'Zen Old Mincho', serif;
 }
 
-/* Main Menu Section */
+/* ===== MAIN LAYOUT ===== */
 .mainMenuSection {
   position: relative;
-  min-height: 140vh;
+  min-height: 120vh;
   margin-top: 80px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  padding-bottom: 12rem;
+  padding-bottom: 8rem;
   z-index: 1;
 }
 
@@ -45,39 +44,22 @@
   padding: 2rem;
   display: flex;
   flex-direction: column;
-  min-height: 120vh;
-  justify-content: flex-start;
-  gap: 2rem;
+  gap: 3rem;
 }
 
-/* Ensure proper spacing to prevent overlap with Menu component */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
-  margin-bottom: 20rem;
-  position: relative;
-  z-index: 1;
-}
-
-/* Top Branding Section */
+/* ===== BRANDING SECTION ===== */
 .brandingSection {
   text-align: center;
-  padding: 1rem 0 2rem 0;
+  padding: 2rem 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .brandContainer {
   max-width: 800px;
   margin: 0 auto;
-}
-
-.brandTitle {
-  font-size: 2.5rem;
-  font-weight: bold;
-  letter-spacing: 4px;
-  margin: 0 0 1rem 0;
-  color: #ffffff;
-  text-transform: uppercase;
+  padding: 0 1rem;
 }
 
 .brandSubtitle {
@@ -85,7 +67,7 @@
   font-weight: 300;
   letter-spacing: 3px;
   color: #d4af37;
-  margin: 0 0 2rem 0;
+  margin: 0 0 1.5rem 0;
   text-transform: uppercase;
 }
 
@@ -97,17 +79,21 @@
   color: #ffffff;
   text-transform: uppercase;
   text-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.1;
 }
 
-/* Menu Categories Section */
+/* ===== MENU CATEGORIES SECTION ===== */
 .menuCategoriesSection {
   display: flex;
   flex: 1;
   align-items: flex-start;
   justify-content: center;
   gap: 4rem;
-  padding: 3rem 0 8rem 0;
-  min-height: 600px;
+  padding: 3rem 0;
+  min-height: 700px;
 }
 
 .leftSide {
@@ -123,7 +109,7 @@
   left: 20px;
   top: 25%;
   width: 220px;
-  height: 800px;
+  height: 600px;
   background-image: url('/src/assets/Side.png');
   background-size: contain;
   background-position: center;
@@ -156,26 +142,28 @@
   letter-spacing: 2px;
   color: #ffffff;
   text-transform: uppercase;
-  padding: 0.5rem 1rem;
+  padding: 0.8rem 1rem;
   margin: 0;
   cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
   z-index: 2;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
 }
 
 .menuCategoryItem:hover {
   color: #d4af37;
   transform: translateY(-3px);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  background: rgba(212, 175, 55, 0.1);
 }
 
 .menuCategoryItem:last-child {
   border-bottom: none;
 }
 
-/* Hover effects for specific menu categories */
+/* ===== HOVER EFFECTS ===== */
 .menuCategories:has(.beef:hover) {
   background-image: url('/src/assets/p1.jpg');
 }
@@ -188,9 +176,9 @@
   background-image: url('/src/assets/n1.jpg');
 }
 
+/* ===== RESPONSIVE DESIGN ===== */
 
-
-/* Responsive Design */
+/* Tablet Landscape */
 @media (max-width: 1024px) {
   .menuCategoriesSection {
     flex-direction: column;
@@ -207,7 +195,7 @@
   }
   
   .menuCategories {
-    gap: 0.75rem;
+    gap: 1rem;
     max-width: 600px;
     margin: 0 auto;
   }
@@ -218,29 +206,22 @@
   }
 }
 
+/* Tablet Portrait */
 @media (max-width: 768px) {
-  .container {
-    padding: 1rem 1rem 0 1rem;
-  }
-  
   .mainMenuSection {
     margin-top: 10px;
-    min-height: calc(100vh - 10px);
-    padding-bottom: 8rem;
+    min-height: calc(120vh - 10px);
+    padding-bottom: 6rem;
   }
   
   .menuContainer {
     padding: 1rem;
-    min-height: calc(100vh - 10px);
     gap: 2rem;
   }
   
   .brandingSection {
-    padding: 1rem 0 2rem 0;
-  }
-  
-  .brandTitle {
-    font-size: 1.8rem;
+    padding: 2rem 0 1.5rem 0;
+    margin-top: 2rem;
   }
   
   .brandSubtitle {
@@ -249,28 +230,21 @@
   }
   
   .menuMainTitle {
-    font-size: 2.3rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    font-size: 1.8rem;
+    letter-spacing: 1.5px;
   }
   
   .menuCategoriesSection {
-    padding: 2rem 0 4rem 0;
-    margin-top: 0;
+    padding: 0.5rem 0 3rem 0;
+    margin-top: -1rem;
+    min-height: 600px;
   }
   
   .sideDecoration {
-    position: absolute;
     width: 45px;
     height: 280px;
     left: 3px;
     top: 25%;
-    background-image: url('/src/assets/Side.png');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: 3;
     opacity: 0.8;
   }
   
@@ -278,27 +252,21 @@
     gap: 0.8rem;
     max-width: 320px;
     padding: 1rem;
-    margin-top: 0;
   }
   
   .menuCategoryItem {
     font-size: 0.9rem;
     padding: 0.4rem 0.6rem;
-    margin: 0;
     letter-spacing: 0.8px;
   }
-  
-  .container {
-    padding: 1rem;
-    margin-bottom: 2rem;
-  }
-
 }
 
+/* Mobile Large */
 @media (max-width: 480px) {
   .mainMenuSection {
     margin-top: 5px;
-    padding-bottom: 6rem;
+    min-height: calc(130vh - 5px);
+    padding-bottom: 4rem;
   }
   
   .menuContainer {
@@ -307,32 +275,8 @@
   }
   
   .brandingSection {
-    padding: 0.8rem 0 1.5rem 0;
-  }
-  
-  .menuCategoriesSection {
-    padding: 1.5rem 0 3rem 0;
-    margin-top: 0;
-  }
-  
-  .sideDecoration {
-    position: absolute;
-    width: 35px;
-    height: 220px;
-    left: 2px;
-    top: 20%;
-    background-image: url('/src/assets/Side.png');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: 3;
-    opacity: 0.7;
-  }
-  
-  .brandTitle {
-    font-size: 1.4rem;
-    letter-spacing: 1.8px;
-    margin: 0 0 0.8rem 0;
+    padding: 2.5rem 0 1rem 0;
+    margin-top: 2.5rem;
   }
   
   .brandSubtitle {
@@ -342,25 +286,154 @@
   }
   
   .menuMainTitle {
-    font-size: 1.9rem;
-    letter-spacing: 1.8px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+  }
+  
+  .menuCategoriesSection {
+    padding: 0.3rem 0 2rem 0;
+    margin-top: -1.5rem;
+    min-height: 500px;
+  }
+  
+  .sideDecoration {
+    width: 35px;
+    height: 220px;
+    left: 2px;
+    top: 20%;
+    opacity: 0.7;
   }
   
   .menuCategories {
     gap: 0.6rem;
     max-width: 300px;
     padding: 0.8rem;
-    margin-top: 0;
   }
   
   .menuCategoryItem {
     font-size: 0.75rem;
     padding: 0.3rem 0.4rem;
-    margin: 0;
     letter-spacing: 0.5px;
   }
+}
 
+/* Mobile Medium */
+@media (max-width: 400px) {
+  .mainMenuSection {
+    min-height: calc(140vh - 5px);
+  }
+  
+  .brandingSection {
+    padding: 3rem 0 1rem 0;
+    margin-top: 3rem;
+  }
+  
+  .menuMainTitle {
+    font-size: 1.2rem;
+    letter-spacing: 0.8px;
+  }
+  
+  .menuCategoriesSection {
+    padding: 0.2rem 0 1.5rem 0;
+    margin-top: -2rem;
+    min-height: 450px;
+  }
+  
+  .brandContainer {
+    padding: 0 0.5rem;
+  }
+  
+  .menuCategories {
+    max-width: 280px;
+    padding: 0.6rem;
+  }
+  
+  .menuCategoryItem {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.3rem;
+    letter-spacing: 0.3px;
+  }
+}
+
+/* Mobile Small */
+@media (max-width: 320px) {
+  .mainMenuSection {
+    min-height: calc(150vh - 5px);
+  }
+  
+  .brandingSection {
+    padding: 3.5rem 0 1rem 0;
+    margin-top: 3.5rem;
+  }
+  
+  .menuMainTitle {
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+  }
+  
+  .menuCategoriesSection {
+    padding: 0.1rem 0 1rem 0;
+    margin-top: -2.5rem;
+    min-height: 400px;
+  }
+  
+  .brandContainer {
+    padding: 0 0.3rem;
+  }
+  
+  .menuCategories {
+    max-width: 260px;
+    padding: 0.5rem;
+  }
+  
+  .menuCategoryItem {
+    font-size: 0.65rem;
+    padding: 0.2rem 0.25rem;
+    letter-spacing: 0.2px;
+  }
+  
+  .sideDecoration {
+    width: 30px;
+    height: 180px;
+    left: 1px;
+    top: 18%;
+    opacity: 0.6;
+  }
+}
+
+/* ===== UTILITY CLASSES ===== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  margin-bottom: 20rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== ACCESSIBILITY ===== */
+@media (prefers-reduced-motion: reduce) {
+  .menuCategoryItem {
+    transition: none;
+  }
+  
+  .menuCategoryItem:hover {
+    transform: none;
+  }
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+  .menuPage {
+    background: white;
+    color: black;
+  }
+  
+  .menuOverlay {
+    display: none;
+  }
+  
+  .sideDecoration {
+    display: none;
+  }
 }
