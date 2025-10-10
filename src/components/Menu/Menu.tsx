@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaFacebookF, FaInstagram } from 'react-icons/fa';
 import styles from './Menu.module.css';
 
 const Menu: React.FC = () => {
@@ -53,8 +54,12 @@ const Menu: React.FC = () => {
             <div className={styles.socialSection}>
               <h4 className={styles.socialTitle}>SOCIALS</h4>
               <div className={styles.socialIcons}>
-                <a href="#" className={styles.socialIcon}>f</a>
-                <a href="#" className={styles.socialIcon}>@</a>
+                <a href="#" className={styles.socialIcon}>
+                  <FaFacebookF />
+                </a>
+                <a href="#" className={styles.socialIcon}>
+                  <FaInstagram />
+                </a>
               </div>
             </div>
           </div>
