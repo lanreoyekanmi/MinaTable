@@ -14,11 +14,12 @@
   top: 0;
   bottom: 0;
   width: 150px;
-  background-image: url('/src/assets/Side.png');
+  background-image: url('/images/Side.png');
   background-size: cover;
   background-position: left center;
   background-repeat: no-repeat;
-  z-index: 1;
+  opacity: 1;
+  z-index: 2;
 }
 
 .gallery::before {
@@ -242,17 +243,17 @@
     left: 0;
     top: 0;
     bottom: 0;
-    width: 80px;
-    background-image: url('/src/assets/Side.png');
+    width: 60px;
+    background-image: url('/images/Side.png');
     background-size: cover;
     background-position: left center;
     background-repeat: no-repeat;
-    opacity: 0.8;
-    z-index: 1;
+    opacity: 1;
+    z-index: 2;
   }
   
   .experienceSection {
-    padding: 2rem 1rem 2rem 100px;
+    padding: 2rem 1rem 2rem 80px;
   }
   
   .experienceContent {
@@ -271,16 +272,16 @@
     left: 0;
     top: 0;
     bottom: 0;
-    width: 60px;
-    background-image: url('/src/assets/Side.png');
+    width: 20px;
+    background-image: url('/images/Side.png');
     background-size: cover;
     background-position: left center;
     background-repeat: no-repeat;
-    opacity: 0.8;
-    z-index: 1;
+    opacity: 1;
+    z-index: 2;
   }
   
   .experienceSection {
-    padding: 1rem 1rem 1rem 80px;
+    padding: 0.5rem 0.5rem 0.5rem 30px;
   }
 }
